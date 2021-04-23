@@ -1,6 +1,4 @@
-# PHP-EXPERT
-
-## 2-OOP
+# OOP BASIC - Objecten en Properties
 
 ## taak03 - Objecten en properties
 

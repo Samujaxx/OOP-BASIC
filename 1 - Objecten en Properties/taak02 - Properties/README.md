@@ -1,6 +1,4 @@
-# PHP-EXPERT
-
-## 2-OOP
+# OOP BASIC - Objecten en Properties
 
 ## taak02 - Properties
 
@@ -34,7 +32,7 @@ $nieuweStudent->achternaam = 'Steenhoven';
 echo $nieuweStudent->voornaam; //Marcel
 ```
 
-Maar je zult wel denken, die laatste manier is veel omslachtiger. Een van de redenenen is als volgt: de waardes `Marcel Steenhoven` zijn aan elkaar gekoppeld door het object __$nieuweStudent__. Bij `Mohammed Sadiq` is dat niet bekend.
+Maar je zult wel denken, die laatste manier is veel omslachtiger (uitgebreider). De reden is: de waardes `Marcel Steenhoven` zijn aan elkaar gekoppeld door het object __$nieuweStudent__. Bij `Mohammed Sadiq` is dat niet bekend.
 
 ## Leerdoelen
 
