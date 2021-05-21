@@ -38,12 +38,7 @@ class Voertuig{
     public $merk;
     public $type;
     public $bouwjaar;
-
-    private $aanhanger = new Aanhanger();
-}
-
-class Aanhanger{
-  public $hoeveelheidRuimte
+    
 }
 
 //Voertuig is een Parent class van Vliegtuig. Je codeert dat zo:
@@ -107,8 +102,9 @@ Oke, dus _private_ betekent dat je het eigenschap/property alleen kunt verandere
 
 ## Opdracht
 
-1. Maak gebruik van de `index.php` en de gegeven Classes.
-2. Maak van alle classes een object en vul de properties met waardes (deze kun je zelf kiezen of opzoeken)
+1. Bekijk ook video [Class Diagram](https://www.youtube.com/watch?v=UI6lqHOVHic)
+2. Maak gebruik van de `index.php` en de gegeven Classes.
+3. Maak van alle classes een object en vul de properties met waardes (deze kun je zelf kiezen of opzoeken)
 
 ## Bronnen
 

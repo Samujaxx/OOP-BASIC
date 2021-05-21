@@ -1,13 +1,11 @@
-# PHP-EXPERT
+# OOP BASIC - Objecten en Methods
 
-## 2-OOP
-
-## taak04 - Methods
+## taak01 - Methods
 
 In deze opdracht gaan we verder met OOP. We gaan het hebben over wat objecten allemaal kunnen. De vorige opdracht ging over wat ze hadden: properties/eigenschappen.
 Nu wat ze kunnen, de functies/methodes, ze kunnen: iets berekenen, iets ophalen, iets wijzigen enz.
 
-### methods
+## Methods
 
 Een methode is een functie in een class. Een object heeft dus één of meerdere methodes die gebruikt kunnen worden. Er bestaan ingebouwde methodes, maar je kunt zelf ook methodes maken.
 
@@ -48,6 +46,8 @@ $blauweEmmer = new Emmer();
 $blauweEmmer->kleur = 'blauw'; 
 $blauweEmmer->checkInhoud();
 ```
+
+Bij zowel de rode als de blauwe emmer komt de zin `de emmer is niet vol` op het scherm. We hebben namelijk de property `inhoud` geen waarde gegeven en dus is deze niet gelijk aan 100. Kijk eens naar het onderstaande voorbeeld waar we een nieuwe emmer maken.
 
 ## Leerdoelen
 

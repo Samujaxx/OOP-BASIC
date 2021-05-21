@@ -1,8 +1,6 @@
-# PHP-EXPERT
+# OOP BASIC - Objecten en Methods
 
-## 2-OOP
-
-## taak05 - Setter
+## taak02 - Setter
 
 Een methode gebruiken die de waarde van properties aanpast.
 
@@ -16,13 +14,13 @@ Ook kun je methods maken die de dan geldige waardes ophalen. In het geval van he
 
 ### voorbeeld
 
-We hebben een class Hond met twee properties: naam en soort. Daarin kun je de _soort_ instellen met een method. Je gebruikt er het woordje __this__ voor. Dat doen we omdat we bij het maken van de class nog niet weten wat de namen van de objecten zullen zijn. 
+We hebben een class Hond met twee properties: naam en soort. Daarin kun je de _soort_ instellen met een method. Je gebruikt er het woordje __this__ voor. Dat doen we omdat we bij het maken van de class nog niet weten wat de namen van de objecten zullen zijn. De objecten zijn tenslotte nog niet gemaakt.
 
 Later weten we dat `$eenHond` gebruikt gaat worden. Maar nu weten we dat eigenlijk nog niet. Maar we willen wel de string `Duitse Herder` toekennen aan de _soort_ propertie. `$this` gaat over _deze_ class (of je kunt ook wel zeggen: gaat over dit object: dit=this)
 
 ```php
 class Hond{
-    public $naam;
+    public $naam; //declareren property $naam
     public $soort;
 
     public function setSoort(){ 
@@ -53,8 +51,8 @@ class Hond{
 }
 
 $eenHond = new Hond();
-$eenHond->setSoort('Duitse Herder');
-echo $eenHond->soort; // Duitse Herder
+$eenHond->setSoort('Schotse terrier');
+echo $eenHond->soort; // Schotse terrier
 ```
 
 In bovenstaand voorbeeld wordt het al een stuk dynamischer. Nogmaals: geen heel boeiende applicatie.

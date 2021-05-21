@@ -1,8 +1,6 @@
-# PHP-EXPERT
+# OOP BASIC - Objecten en Methods
 
-## 2-OOP
-
-## taak06 - Getter
+## taak03 - Getter
 
 Een methode gebruiken die de waarde van properties ophaalt. Een get-method.
 
@@ -40,7 +38,7 @@ echo $eenHond->soort; //Duitse Herder
 echo $eenHond->getSoort(); // Duitse Herder
 ```
 
-Je ziet dat de laatste twee regels hetzelfde resultaat veroorzaken. In dit geval kan je dus beide regels code gebruiken. In de volgende opdracht zal het verschil duidelijker worden als we het gaan hebben over __zichtbaarheid__.
+Je ziet dat de laatste twee regels hetzelfde resultaat veroorzaken. In dit geval kan je dus beide regels code gebruiken. 
 
 ## Leerdoelen
 

@@ -1,10 +1,15 @@
 <?php
-
+/**
+ * Maak van elke class een object. En gebruik alle properties waartoe het object toegang tot heeft.
+ * Goed lezen wat de child-parent relatie is
+ * Goed lezen of de property toegankelijk is
+ */
 class Luchtvaartuig
 {
     public $soort;
     public $brandstof;
-    private $bouwjaar;
+    protected $bouwjaar;
+    private $serienNummer;
 }
 
 class Vliegtuig extends Luchtvaartuig
