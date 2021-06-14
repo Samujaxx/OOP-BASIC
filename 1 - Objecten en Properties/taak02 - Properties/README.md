@@ -6,7 +6,7 @@ Je gebruikt in deze opdracht de properties die je hebt gemaakt bij de class.
 
 ### Properties een waarde geven
 
-Je weet hoe je een variabele declareert en een waarde geeft:
+Je weet hoe je een variabele declareert (aanroept) en een waarde geeft:
 
 ```php
 $voornaam = 'Mohammed';
@@ -16,7 +16,8 @@ echo $achternaam; //Sadiq
 
 ```
 
-Met properties van objecten kunnen we dat ook doen:
+Wij weten nu dat in dit voorbeeld de waarde van `$voornaam` en de waarde van `$achternaam` (`Mohammed Sadiq`) bij elkaar horen. Maar als je heel veel variabelen hebt dan wordt je code al gauw onoverzichtelijk.
+We groeperen de stukken code om het zo overzichtelijker te maken. Daarnaast wordt code gestructureerder.
 
 ```php
 class Student{
@@ -26,7 +27,7 @@ class Student{
 
 // het woord public komen we later op terug
 
-$nieuweStudent = new Student();
+$nieuweStudent = new Student(); // hier maken we een object $nieuweStudent aan door gebruik te maken van de class Student
 $nieuweStudent->voornaam = 'Marcel';
 $nieuweStudent->achternaam = 'Steenhoven';
 echo $nieuweStudent->voornaam; //Marcel

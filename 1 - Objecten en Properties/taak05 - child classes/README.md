@@ -1,6 +1,6 @@
 # OOP BASIC - Objecten en Properties
 
-## taak04 - Zichtbaarheid
+## taak04 - Public
 
 Bij de vorige taken hebben we het woord `public` gezet voor een property bij het maken van een Class.
 
@@ -10,7 +10,7 @@ class Voertuig{
 }
 ```
 
-Dit woordje geeft aan waar de property te gebruiken is binnen de code. Het woordje __public__ geeft aan dat de property toegankelijk is vanuit de gehele code, vanuit alle andere Classes/Objecten. Het is geen kwestie van security maar meer van code structuren, dit wordt ook wel __DRY__ coderen genoemd. DRY staat voor Don't Repeat Yourself.
+Dit woordje geeft aan waar de property te gebruiken is binnen de code. Het woordje __public__ geeft aan dat de property toegankelijk is vanuit de gehele code. Het is geen kwestie van security maar meer van code structuren, dit wordt ook wel __DRY__ coderen genoemd. DRY staat voor Don't Repeat Yourself.
 
 Er zijn nog twee andere woorden die je vaak zult tegenkomen:
 
@@ -23,11 +23,13 @@ Er zijn nog twee andere woorden die je vaak zult tegenkomen:
 
 Maar wacht eens even, wat is nu een `child class`?
 
-Stel je hebt een Voertuig Class met bepaalde properties zoals type, merk en bouwjaar. Dan kun je van deze Class zogenaamde Child classes maken. Zoals een Vliegtuig Class of een Auto Class. Allebei voertuigen. De eigenschappen van de parent, de Voertuig Class, worden dan geerfd en hoef je niet opnieuw te maken (DRY == Don't Repeat Yourself).
+Stel je hebt een Voertuig Class met bepaalde properties zoals kleur, type, merk en bouwjaar. Maar je wilt bijvoorbeeld ook een Vliegtuig Class of een Auto Class kunnen maken. Allebei voertuigen. Omdat de properties van Voertuig ook gelden voor Vliegtuig én ook voor Auto kun je aangeven dat zij de eigenschappen/properties van Voertuig erven.
 
 ![Visibility](images/visilbility.png)
 
-De properties uit de Class Voertuig zijn bijna allemaal toegankelijk vanuit de Child Classes, er staat een `+` voor wat `public` betekent.
+De eigenschappen van de _parent class_, de Voertuig Class, worden dan geerfd door de _child classes_ en hoef je niet opnieuw te maken (DRY == Don't Repeat Yourself).
+
+De properties uit de Class Voertuig zijn allemaal toegankelijk vanuit de Child Classes, er staat een `+` voor wat `public` betekent.
 
 ### voorbeeld
 
@@ -47,6 +49,11 @@ class Vliegtuig extends Voertuig{
    public $lengteVleugel;
 }
 
+```
+
+> Eigenlijk wordt de Voertuig class uitgebreid. Tenslotte kunnen we eigenschappen toevoegen aan Auto die niet in Voertuig zitten, vandaar het woordje `extends`. 
+
+```php
 // we maken eerst een auto object
 
 $auto = new Voertuig();
@@ -68,13 +75,13 @@ Zie je dat `$lengteVleugel` niet bij Voertuig staat en dus ook niet gebruikt kan
 
 Ok, dan weer even over die _zichtbaarheid_.
 
-Stel nou dat we private gebruiken i.p.v. public bij `merk`. Dan is de eigenschap niet meer toegankelijk in de Child Class maar ook niet ergens anders in de code. Kijk eens hoe dat eruit ziet
+Stel nou dat we private gebruiken i.p.v. public bij `merk`. Dan is de eigenschap niet meer toegankelijk in de Child Class maar ook niet ergens anders in de code. Kijk eens hoe dat eruit ziet.
 
 ```php
 class Voertuig{
     private $merk; //we gebruiken nu private i.p.v. public
-    public $type;
-    public $bouwjaar;
+    public  $type;
+    public  $bouwjaar;
 }
 
 $auto = new Voertuig();
@@ -87,7 +94,7 @@ class Vliegtuig extends Voertuig{
 }
 
 $vliegtuig = new Vliegtuig();
-$vliegtuig->type = "A350"
+$vliegtuig->type = "A350";
 $vliegtuig->bouwjaar = 2013;
 $vliegtuig->lengteVleugel = 64.75; //in meters
 
